@@ -6,9 +6,20 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1.3"
         android:padding="8dp"
         android:text="STATE/UT"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="2dp"
+        android:text="confirmed"
+        android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textStyle="bold" />
@@ -16,36 +27,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="8dp"
-        android:text="confirmed"
-        android:textAllCaps="true"
-        android:textColor="@color/red"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:text="active"
-        android:textAllCaps="true"
-        android:textColor="@color/blue"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
+        android:padding="2dp"
+        android:textAlignment="center"
         android:text="recovered"
         android:textAllCaps="true"
-        android:textColor="@color/green"
+        android:textColor="@color/white"
         android:textStyle="bold" />
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="8dp"
+        android:layout_weight="0.7"
+        android:padding="2dp"
+        android:textAlignment="center"
         android:text="deaths"
         android:textAllCaps="true"
-        android:textColor="@color/yellow"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 </LinearLayout>

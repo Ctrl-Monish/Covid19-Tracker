@@ -7,20 +7,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:gravity="center_horizontal"
-    android:background="@android:color/black">
+    android:background="@color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:textSize="25dp"
             android:layout_margin="10dp"
-            android:text="INDIA COVID-19 CASES"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"/>
+            android:fontFamily="@font/chelsea_market"
+            android:text="COVID-19"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/lastUpdatedTimeTV"
@@ -30,130 +32,15 @@
             android:layout_marginStart="10dp"
             android:text="Last Updated:"
             android:textStyle="bold"
-            android:textColor="@android:color/white"/>
-
+            android:textColor="@color/coolgrey"/>
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CONFIRMED"
-                android:textColor="@color/red"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/ic_virus"
-                app:tint="@color/red" />
-
-            <TextView
-                android:id="@+id/confirmedTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/red"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ACTIVE"
-                android:textColor="@color/blue"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/ic_patient"
-                app:tint="@color/blue" />
-
-            <TextView
-                android:id="@+id/activeTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/blue"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RECOVERED"
-                android:textColor="@color/green"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/ic_heart"
-                app:tint="@color/green"/>
-
-            <TextView
-                android:id="@+id/recoveredTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/green"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DECEASED"
-                android:textColor="@color/yellow"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/ic_death"
-                app:tint="@color/yellow" />
-
-            <TextView
-                android:id="@+id/deceasedTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="@color/yellow"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    <include layout="@layout/totalcard"/>
 
     <ListView
+        android:padding="6dp"
+        android:divider="@drawable/divider"
+        android:dividerHeight="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list_view">

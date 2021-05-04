@@ -17,10 +17,9 @@ class StateAdapter(val list: List<StatewiseItem>): BaseAdapter() {
         val view = convertView ?: LayoutInflater.from(parent?.context)
             .inflate(R.layout.item_list, parent, false)
         val item = list[position]
-        view.cnfrmdTv.text = SpannableDelta("${item.confirmed}\n ↑${item.deltaconfirmed?:0}","#DC143C", item.confirmed?.length?:0)
+        view.cnfrmdTv.text = SpannableDelta("${item.confirmed}\n ↑${item.deltaconfirmed?:0}","#DCEE69", item.confirmed?.length?:0)
         view.rcvdtv.text = SpannableDelta("${item.recovered}\n ↑${item.deltarecovered?:0}","#00FF00", item.recovered?.length?:0)
-        view.dedTV.text = item.deaths
-        view.actvTV.text = item.active
+        view.dedTV.text = SpannableDelta("${item.deaths}\n ↑${item.deltadeaths?:0}","#DC143C", item.recovered?.length?:0)
         view.stteTv.text = item.state
         return view
     }
